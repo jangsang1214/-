@@ -21,8 +21,8 @@ export default function HomePage() {
           </div>
         </div>
         <div className="hero__footer shell eyebrow">
-          <span>Contemporary objects from accumulated Korean forms</span>
-          <span>Archive begins with 001</span>
+          <span>Object 001 / Origin</span>
+          <span>GARANG Archive</span>
         </div>
       </section>
 
@@ -40,14 +40,14 @@ export default function HomePage() {
             <p className="eyebrow">Collection I / Origin</p>
             <h2 className="origin-feature__title serif">ORIGIN</h2>
           </div>
-          <p className="origin-feature__intro">모든 축적에는 시작이 있다. 오래된 형태를 재현하지 않고, 곡선과 여백만을 남겨 오늘의 비례로 다시 세운다.</p>
+          <p className="origin-feature__intro">모든 축적에는 시작이 있다. 오래된 형상을 복제하지 않고, 곡선과 여백의 긴장만 남겨 오늘의 오브젝트로 다시 세운다.</p>
         </div>
 
         <div className="origin-object-stage">
           <div className="origin-object-stage__halo" aria-hidden="true" />
           <GogokObject withChain />
           <div className="origin-object-stage__caption shell eyebrow">
-            <span>GOGOK 001</span><span>Sterling silver / Jade</span>
+            <span>GOGOK 001 / C — ORIGIN</span><span>925 Silver / Natural Jade</span>
           </div>
         </div>
 
@@ -69,6 +69,7 @@ export default function HomePage() {
             <p>{object.story}</p>
             <div className="spec-list">
               <div className="spec-row"><span>Material</span><span>{object.material.join(" / ")}</span></div>
+              <div className="spec-row"><span>Dimensions</span><span>{object.dimensions}</span></div>
               <div className="spec-row"><span>Finish</span><span>{object.finish}</span></div>
               <div className="spec-row"><span>Place</span><span>{object.place}</span></div>
               <div className="spec-row"><span>Edition</span><span>{object.edition}</span></div>

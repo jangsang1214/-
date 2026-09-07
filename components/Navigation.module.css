@@ -1,0 +1,63 @@
+.mobileMenu {
+  display: none;
+  position: relative;
+}
+
+.mobileMenu summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: .66rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #d2ccc3;
+  user-select: none;
+}
+
+.mobileMenu summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobileMenu summary::after {
+  content: " +";
+  color: #77736d;
+}
+
+.mobileMenu[open] summary::after {
+  content: " −";
+}
+
+.panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 1.2rem);
+  width: min(78vw, 320px);
+  padding: 1.35rem;
+  background: rgba(9, 9, 9, .97);
+  border: 1px solid rgba(234, 230, 223, .14);
+  backdrop-filter: blur(18px);
+  display: grid;
+}
+
+.panel a {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(234, 230, 223, .1);
+  font-size: .68rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #bdb7ae;
+}
+
+.panel a:last-child {
+  border-bottom: 0;
+  color: #eae6df;
+}
+
+@media (max-width: 860px) {
+  :global(.nav__links) {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+}

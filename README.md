@@ -66,6 +66,10 @@ npm run build
 
 Next.js is pinned to `15.5.25`, a Maintenance LTS patch newer than the August 2026 security release baseline (`15.5.24`).
 
+## Preview deployment
+
+The repository is ready for a standard Next.js host such as Vercel. GitHub Pages was intentionally not retained because repository-level Pages enablement requires account-side authorization that is unavailable to the GitHub integration used during this build.
+
 ## What is intentionally provisional
 
 The current sculptural GOGOK visual is an SVG art-direction asset for layout development, not a manufacturing-accurate product render. Final product photography, final licensed typefaces/wordmark, commerce/payment wiring, analytics, domain-based metadata, and production content should be connected after the physical GOGOK 001 prototype is finalized.

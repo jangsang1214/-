@@ -56,7 +56,7 @@
   color: #eae6df;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 960px) {
   .desktopLinks {
     display: none;
   }

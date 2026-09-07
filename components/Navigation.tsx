@@ -15,7 +15,7 @@ export function Navigation() {
         <BrandMark compact />
       </Link>
 
-      <div className="nav__links">
+      <div className={`nav__links ${styles.desktopLinks}`}>
         {links.map(([label, href]) => (
           <Link className="nav__link" href={href} key={href}>{label}</Link>
         ))}

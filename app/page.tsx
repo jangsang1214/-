@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
+import { GogokObject } from "@/components/GogokObject";
 import { objects } from "@/data/objects";
 import styles from "./page.module.css";
 
@@ -8,6 +9,52 @@ const object = objects[0];
 export default function HomePage() {
   return (
     <main className={styles.page}>
+      <style>{`
+        .mobile-product-fallback,
+        .mobile-wear-fallback {
+          display: none;
+        }
+
+        @media (max-width: 980px) {
+          .mobile-photo-source {
+            display: none !important;
+          }
+
+          .mobile-product-fallback {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            background:
+              radial-gradient(circle at 50% 44%, rgba(111,129,114,.13), transparent 34%),
+              #090909;
+            overflow: hidden;
+          }
+
+          .mobile-product-fallback .gogok-object {
+            width: min(92vw, 620px);
+            height: auto;
+          }
+
+          .mobile-wear-fallback {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            background:
+              radial-gradient(circle at 50% 45%, rgba(111,129,114,.10), transparent 32%),
+              #11110f;
+            overflow: hidden;
+          }
+
+          .mobile-wear-fallback .gogok-object {
+            width: min(72vw, 460px);
+            height: auto;
+            opacity: .9;
+          }
+        }
+      `}</style>
+
       <section className={styles.hero}>
         <Navigation />
         <div className={`${styles.shell} ${styles.heroBody}`}>
@@ -32,7 +79,10 @@ export default function HomePage() {
           </div>
 
           <figure className={styles.heroMedia}>
-            <img src="/c-product.svg" alt="GOGOK 001 ORIGIN C concept pendant" />
+            <img className="mobile-photo-source" src="/c-product.svg" alt="GOGOK 001 ORIGIN C concept pendant" />
+            <div className="mobile-product-fallback" aria-label="GOGOK 001 ORIGIN C pendant">
+              <GogokObject withChain />
+            </div>
           </figure>
         </div>
       </section>
@@ -53,7 +103,10 @@ export default function HomePage() {
       <section className={styles.objectSection}>
         <div className={`${styles.shell} ${styles.objectGrid}`}>
           <div className={styles.objectMedia}>
-            <img src="/c-product.svg" alt="GOGOK 001 ORIGIN pendant study" />
+            <img className="mobile-photo-source" src="/c-product.svg" alt="GOGOK 001 ORIGIN pendant study" />
+            <div className="mobile-product-fallback" aria-hidden="true">
+              <GogokObject />
+            </div>
           </div>
 
           <div className={styles.objectCopy}>
@@ -93,7 +146,10 @@ export default function HomePage() {
           </div>
 
           <div className={styles.wearingMedia}>
-            <img src="/c-wear.svg" alt="GOGOK 001 ORIGIN wearing study" />
+            <img className="mobile-photo-source" src="/c-wear.svg" alt="GOGOK 001 ORIGIN wearing study" />
+            <div className="mobile-wear-fallback" aria-hidden="true">
+              <GogokObject />
+            </div>
           </div>
         </div>
       </section>

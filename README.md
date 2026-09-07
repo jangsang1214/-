@@ -1,6 +1,6 @@
-# GARANG Web — UI System v1
+# GARANG Web — Digital Flagship v1
 
-GARANG is a Seoul-born contemporary luxury house that translates accumulated Korean forms, craft, and memory into modern objects.
+GARANG is a Seoul-born contemporary luxury house translating accumulated Korean forms, craft, and memory into modern objects.
 
 > 우리는 쌓아온 것으로 존재한다.
 >
@@ -11,27 +11,39 @@ GARANG is a Seoul-born contemporary luxury house that translates accumulated Kor
 - Next.js App Router
 - React
 - TypeScript
-- CSS design tokens / responsive editorial layout
+- CSS design tokens and responsive editorial layout
+- GitHub Actions type-check + production build verification
 
 ## Routes
 
-- `/` — Brand / philosophy / ORIGIN / GOGOK 001 / archive entry
+- `/` — Digital flagship: philosophy → ORIGIN → GOGOK 001 → craft → archive
 - `/origin` — Collection I: ORIGIN
-- `/objects/gogok-001` — Data-driven object detail page
+- `/objects/gogok-001` — Data-driven object detail + private acquisition request
 - `/archive` — Archive object index
 
-## Design principles
+## Brand / UI principles
 
-- Quiet luxury
+- Quiet luxury rather than performance-commerce aesthetics
 - Editorial, museum-like composition
 - Korean heritage as hidden structure, not decorative costume
-- Strong negative space
+- Strong negative space and restrained motion
 - Ink black / Hanji white / stone / jade palette
-- Minimal commercial language
+- Product as archive object, not SKU noise
+- Mobile experience designed as a vertical exhibition rather than a desktop shrink-down
 
 ## Content-driven expansion
 
-Objects are defined in `data/objects.ts`. Add another object there and reuse the dynamic object route and archive system instead of hard-coding a separate product UI.
+Objects are defined in `data/objects.ts`. Add another object there and reuse the dynamic object route and archive system instead of hard-coding separate product pages.
+
+## Private acquisition
+
+The acquisition UI is intentionally separated from conventional checkout language. To connect acquisition requests to an email address, configure:
+
+```bash
+NEXT_PUBLIC_ACQUIRE_EMAIL=your-address@example.com
+```
+
+Without this environment variable, the interface remains in pre-production/request-opening mode.
 
 ## Development
 
@@ -42,6 +54,13 @@ npm run dev
 
 Then open `http://localhost:3000`.
 
-## Current v1 scope
+Production verification:
 
-This first build establishes the living UI system and editorial structure. Production photography, final GARANG wordmark/font licensing, commerce/payment wiring, analytics, SEO refinement, and real product imagery should be integrated after the GOGOK 001 physical prototype is finalized.
+```bash
+npx tsc --noEmit
+npm run build
+```
+
+## What is intentionally provisional
+
+The current sculptural GOGOK visual is an SVG art-direction asset for layout development, not a manufacturing-accurate product render. Final product photography, final licensed typefaces/wordmark, commerce/payment wiring, analytics, domain-based metadata, and production content should be connected after the physical GOGOK 001 prototype is finalized.

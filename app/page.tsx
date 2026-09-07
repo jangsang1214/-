@@ -37,7 +37,7 @@ export default function HomePage() {
       <section className="origin-feature hairline">
         <div className="shell origin-feature__head">
           <div>
-            <p className="eyebrow">Collection I / 2027</p>
+            <p className="eyebrow">Collection I / Origin</p>
             <h2 className="origin-feature__title serif">ORIGIN</h2>
           </div>
           <p className="origin-feature__intro">모든 축적에는 시작이 있다. 오래된 형태를 재현하지 않고, 곡선과 여백만을 남겨 오늘의 비례로 다시 세운다.</p>

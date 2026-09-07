@@ -1,0 +1,1 @@
+GARANG product imagery in this folder is provisional art-direction material derived from the selected C concept board. Replace with manufacturing-accurate photography or renders before commercial launch.

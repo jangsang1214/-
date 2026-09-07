@@ -25,15 +25,15 @@ export const objects: GarangObject[] = [
     era: "ORIGIN / Ancient Korean form",
     year: "2027",
     place: "Seoul, Korea",
-    material: ["Sterling Silver 925", "Natural Jade"],
-    dimensions: "25 × 18 × 4 mm",
-    finish: "Satin face / mirror-polished edge",
+    material: ["Sterling Silver 925", "Natural Jade 5–6 mm"],
+    dimensions: "22 × 18 × 4 mm",
+    finish: "Satin brush / mirror-polished edge",
     chain: "925 Silver, 45 cm + 5 cm extension",
     edition: "Founding Edition / 100 pieces",
     price: 329000,
     statement: "The empty space is yours to build.",
     story:
-      "GOGOK 001 does not reproduce an artifact. It extracts the asymmetry, tension, and open space of an accumulated Korean form and turns it into a contemporary object for what comes next.",
+      "GOGOK 001 — ORIGIN is built as an open circular form. A deliberate gap remains unfinished, with a natural jade sphere held between the two silver ends. It does not reproduce a historical artifact; it carries forward curve, void, and tension as a contemporary object for what comes next.",
   },
 ];
 

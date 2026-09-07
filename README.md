@@ -30,6 +30,7 @@ GARANG is a Seoul-born contemporary luxury house translating accumulated Korean 
 - Ink black / Hanji white / stone / jade palette
 - Product as archive object, not SKU noise
 - Mobile experience designed as a vertical exhibition rather than a desktop shrink-down
+- Compact mobile navigation that preserves the flagship hierarchy
 
 ## Content-driven expansion
 
@@ -57,9 +58,13 @@ Then open `http://localhost:3000`.
 Production verification:
 
 ```bash
-npx tsc --noEmit
+npm run typecheck
 npm run build
 ```
+
+## Runtime baseline
+
+Next.js is pinned to `15.5.25`, a Maintenance LTS patch newer than the August 2026 security release baseline (`15.5.24`).
 
 ## What is intentionally provisional
 
